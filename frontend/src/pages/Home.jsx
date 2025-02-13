@@ -9,7 +9,7 @@ export default function Home() {
     const [difficulty, setDifficulty] = useState('beginner');
 
     return(
-        <div>
+        <div className="bg-white">
             <Header/>
             <div className="md:p-10 md:px-14 p-5 flex flex-col gap-10 w-full">
                 <div className=""><Input stack={stack} setStack={setStack} setDifficulty={setDifficulty}/></div>

@@ -1,7 +1,6 @@
 import { createContext, useContext } from "react";
 import { initializeApp } from "firebase/app";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signOut, GithubAuthProvider, sendEmailVerification, onAuthStateChanged } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
 
 const firebaseConfig = {
     apiKey: import.meta.env.VITE_API_KEY,
