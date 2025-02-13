@@ -25,7 +25,6 @@ export default function Login(){
         } 
         catch (error) {
           console.error("Error signing up with Google", error);
-          
         }
     };
     const handleGithubSignUp = async () => {
@@ -38,7 +37,7 @@ export default function Login(){
     };
     
     return (
-        <div className="flex flex-col items-center justify-center h-screen gap-2">
+        <div className="md:p-10 md:px-14 p-5 flex flex-col items-center justify-center h-screen gap-2">
             <div className="text-xl font-semibold">Sign-in to your account</div>
             <LoginForm handleSignup={handleSignin}handleGoogleSignUp={handleGoogleSignUp} handleGithubSignUp={handleGithubSignUp} error={error} setError={setError}/>
         </div>

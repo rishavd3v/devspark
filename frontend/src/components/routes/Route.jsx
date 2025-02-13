@@ -11,7 +11,7 @@ const ProtectedRoute = ({ element }) => {
     return <LoadingSpinner />;
   }
 
-  return loggedIn ? element : <Navigate to="/signup" />;
+  return loggedIn ? element : <Navigate to="/login" />;
 };
 
 const UnprotectedRoute = ({ element }) => {

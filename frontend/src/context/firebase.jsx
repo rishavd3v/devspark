@@ -1,6 +1,7 @@
 import { createContext, useContext } from "react";
 import { initializeApp } from "firebase/app";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signOut, GithubAuthProvider, sendEmailVerification, onAuthStateChanged } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 const firebaseConfig = {
     apiKey: import.meta.env.VITE_API_KEY,
@@ -23,8 +24,9 @@ const FirebaseContext = createContext(null);
 export const useFirebase = () => useContext(FirebaseContext);
 
 export const FirebaseProvider = (props) =>{
-    const signupUserWithEmail = (email,password)=>{
-        return createUserWithEmailAndPassword(firebaseAuth,email,password);
+    const signupUserWithEmail = async (email,password)=>{
+        await createUserWithEmailAndPassword(firebaseAuth,email,password);
+        verifyMail();
     };
     const signinWithEmail = (email,password)=>{
         return signInWithEmailAndPassword(firebaseAuth,email,password);
@@ -36,11 +38,19 @@ export const FirebaseProvider = (props) =>{
         signInWithPopup(firebaseAuth,githubProvider);
     }
     const signoutUser = ()=>{
-        return signOut(firebaseAuth);
+        signOut(firebaseAuth);
     }
     const verifyMail = async ()=>{
-        await sendEmailVerification(firebaseAuth.currentUser);
-        alert('Verification email sent to '+firebaseAuth.currentUser.email);
+        const user = firebaseAuth.currentUser;
+        if(user.emailVerified){
+            try{
+                await sendEmailVerification(firebaseAuth.currentUser);
+                alert('Verification email sent to '+firebaseAuth.currentUser.email);
+            }
+            catch(error){
+                console.error("Error sending verification email",error);
+            }
+        }
     }
 
     return (

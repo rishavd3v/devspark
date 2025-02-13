@@ -11,7 +11,7 @@ export default function Header(){
             <div className="font-bold">DEVSPARK</div>
             <div className="flex items-center gap-4">
                 <button onClick={handleClick}>Home</button>
-                <button onClick={()=>navigate('/profile')}><Avatar/></button>
+                <button onClick={()=>navigate('/profile')} className="w-10"><Avatar/></button>
                 
             </div>
         </div>
