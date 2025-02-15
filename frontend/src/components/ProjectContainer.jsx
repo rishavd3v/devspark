@@ -1,98 +1,21 @@
-export default function ProjectContainer() {
-  const projects = [
-    {
-      title: "Project 1",
-      desc: "A real-time chat app with multiple rooms and direct messaging using React,A real-time chat app with multiple rooms and direct messaging using React",
-      difficulty: "Hard",
-      stack: "React",
-      steps: [
-        "Set up the frontend with React",
-        "Implement the backend (e.g., with Node.js and Socket.io)",
-        "Create user authentication system",
-        "Develop chat room functionality",
-        "Add direct messaging feature",
-        "Implement real-time notifications",
-      ],
-      prerequisites: [
-        "Knowledge of React and state management",
-        "Familiarity with RESTful APIs",
-        "Understanding of responsive design principles",
-      ],
-      learn: [
-        "Real-time communication with WebSockets",
-        "Scaling real-time applications",
-        "Advanced state management in React",
-        "Securing WebSocket connections",
-      ],
-    },
-    {
-      title: "Project 1",
-      desc: "A real-time chat app with multiple rooms and direct messaging using React",
-      difficulty: "Hard",
-      stack: "React",
-      steps: [
-        "Set up the frontend with React",
-        "Implement the backend (e.g., with Node.js and Socket.io)",
-        "Create user authentication system",
-        "Develop chat room functionality",
-        "Add direct messaging feature",
-        "Implement real-time notifications",
-      ],
-      prerequisites: [
-        "Knowledge of React and state management",
-        "Familiarity with RESTful APIs",
-        "Understanding of responsive design principles",
-      ],
-      learn: [
-        "Real-time communication with WebSockets",
-        "Scaling real-time applications",
-        "Advanced state management in React",
-        "Securing WebSocket connections",
-      ],
-    },
-    {
-      title: "Project 1",
-      desc: "A real-time chat app with multiple rooms and direct messaging using React",
-      difficulty: "Hard",
-      stack: "React",
-      steps: [
-        "Set up the frontend with React",
-        "Implement the backend (e.g., with Node.js and Socket.io)",
-        "Create user authentication system",
-        "Develop chat room functionality",
-        "Add direct messaging feature",
-        "Implement real-time notifications",
-      ],
-      prerequisites: [
-        "Knowledge of React and state management",
-        "Familiarity with RESTful APIs",
-        "Understanding of responsive design principles",
-      ],
-      learn: [
-        "Real-time communication with WebSockets",
-        "Scaling real-time applications",
-        "Advanced state management in React",
-        "Securing WebSocket connections",
-      ],
-    },
-  ];
+export default function ProjectContainer({projects}) {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {projects.map((project, index) => {
+      {projects?.data?.map((project, index) => {
         return (
           <div key={index} className="p-4 rounded-lg shadow-md flex flex-col gap-4 border justify-between">
             <div className="text-xl font-semibold flex flex-col">
-              {project.title}
+              {project.name}
               <div className="text-sm text-zinc-500">{project.desc}</div>
             </div>
 
             <div className="flex gap-2 font-semibold text-xs items-center">
               <div
                 className={`rounded-full text-white px-2 py-1 w-max ${
-                  project.difficulty == "Easy"
+                  project.difficulty == "Beginner"
                     ? "bg-green-600"
-                    : project.difficulty == "Medium"
+                    : project.difficulty == "Intermediate"
                     ? "bg-yellow-500"
                     : "bg-red-600"
                 }`}
@@ -119,7 +42,7 @@ export default function ProjectContainer() {
               <div className="font-semibold">Requirements:</div>
               <div>
                 <ul style={{ listStyleType: "disc", paddingLeft: "20px" }}>
-                  {project.prerequisites.map(
+                  {project.requirement.map(
                     (prerequisite, prerequisiteIndex) => {
                       return <li key={prerequisiteIndex}>{prerequisite}</li>;
                     }

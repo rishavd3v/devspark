@@ -6,10 +6,10 @@ export default function Landing() {
         <div className="bg-zinc-950 text-white">
             <div className="flex flex-col justify-center items-center h-screen">
                 <div className="flex flex-col justify-center items-center h-full px-4 lg:p-0 lg lg:w-1/2 text-center gap-4">
-                    <div className="text-6xl font-extrabold">Fuel Your Creativity with DevSpark</div>
+                    <div className="text-6xl font-extrabold">Fuel Your Creativity with <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent text-7xl">DevSpark</span></div>
                     <div className="text-lg font-medium text-zinc-400">Unlock AI-powered project ideas tailored to your tech stack. Spark creativity and build your next big project effortlessly.</div>
                     <div className="mt-10">
-                        <button className="flex gap-3 items-center py-2 px-6 bg-white text-black font-light rounded" onClick={()=>navigate('/home')}>
+                        <button className="flex gap-3 items-center py-2 px-6 text-white font-light rounded bg-gradient-to-r from-pink-500 to-purple-400" onClick={()=>navigate('/home')}>
                             Get Started
                             <i className="bi bi-arrow-right"></i>
                         </button>
@@ -19,13 +19,13 @@ export default function Landing() {
 
             <div className="flex flex-col justify-center items-center">
                 <div className="flex flex-col justify-center items-center h-full px-4 lg:p-0 lg:w-1/2 text-center gap-4">
-                    <div className="sm:text-6xl text-5xl font-extrabold">Build Beyond Imagination</div>
+                    <div className="sm:text-6xl text-5xl font-extrabold">Build Beyond <span className="bg-gradient-to-r from-green-400 via-blue-500 to-indigo-500 bg-clip-text text-transparent">Imagination</span></div>
                     <div className="text-lg font-medium text-zinc-400">Discover unique project ideas tailored to your tech stack and bring your creativity to life with DevSpark.</div>
 
                     <div className="grid grid-cols-2 grid-rows-2 gap-8 mt-10 justify-center">
-                        <div className="md:p-6 p-4 border border-zinc-600 shadow shadow-zinc-700 rounded-md flex flex-col gap-2">
-                            <div className="flex lg:gap-4">
-                                <i className="bi bi-arrow-right font-bold text-xl"></i>
+                        <div className="md:p-6 p-4 border border-zinc-600 shadow shadow-zinc-700 rounded-md flex flex-col gap-2 items-center">
+                            <div className="flex lg:gap-4 gap-1 items-center">
+                                <i className="bi bi-lightning-fill font-bold text-xl bg-blue-500 px-2 aspect-square rounded-md flex items-center"></i>
                                 <div className="md:text-lg font-bold">AI-Driven Project Ideas</div>
                             </div>
                             <div>
@@ -34,9 +34,9 @@ export default function Landing() {
                             </div>
                         </div>
                         
-                        <div className="md:p-6 p-4 border border-zinc-600 shadow shadow-zinc-700 rounded-md flex flex-col gap-2">
-                            <div className="flex lg:gap-4">
-                                <i className="bi bi-arrow-right font-bold text-xl"></i>
+                        <div className="md:p-6 p-4 border border-zinc-600 shadow shadow-zinc-700 rounded-md flex flex-col gap-2 items-center">
+                            <div className="flex lg:gap-4 gap-1 items-center">
+                                <i className="bi bi-boxes font-bold text-xl bg-blue-500 px-2 aspect-square rounded-md flex items-center"></i>
                                 <div className="text-lg font-bold">Tech Stack Customization</div>
                             </div>
                             <div>
@@ -44,9 +44,9 @@ export default function Landing() {
                             </div>
                         </div>
                         
-                        <div className="md:p-6 p-4 border border-zinc-600 shadow shadow-zinc-700 rounded-md flex flex-col gap-2">
-                            <div className="flex lg:gap-4">
-                                <i className="bi bi-arrow-right font-bold text-xl"></i>
+                        <div className="md:p-6 p-4 border border-zinc-600 shadow shadow-zinc-700 rounded-md flex flex-col gap-2 items-center">
+                            <div className="flex lg:gap-4 gap-1 items-center">
+                                <i className="bi bi-rocket-takeoff-fill font-bold text-xl bg-blue-500 px-2 aspect-square rounded-md flex items-center"></i>
                                 <div className="text-lg font-bold">Endless Innovation</div>
                             </div>
                             <div>
@@ -54,9 +54,9 @@ export default function Landing() {
                             </div>
                         </div>
                         
-                        <div className="md:p-6 p-4 border border-zinc-600 shadow shadow-zinc-700 rounded-md flex flex-col gap-2">
-                            <div className="flex lg:gap-4">
-                                <i className="bi bi-arrow-right font-bold text-xl"></i>
+                        <div className="md:p-6 p-4 border border-zinc-600 shadow shadow-zinc-700 rounded-md flex flex-col gap-2 items-center">
+                            <div className="flex lg:gap-4 gap-1 items-center">
+                                <i className="bi bi-fire font-bold text-xl bg-blue-500 px-2 aspect-square rounded-md flex items-center"></i>
                                 <div className="text-lg font-bold">Boost Your Portfolio</div>
                             </div>
                             <div>

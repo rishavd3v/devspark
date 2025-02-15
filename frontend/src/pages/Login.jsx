@@ -37,7 +37,7 @@ export default function Login(){
     };
     
     return (
-        <div className="md:p-10 md:px-14 p-5 flex flex-col items-center justify-center h-screen gap-2">
+        <div className="md:p-10 md:px-14 p-5 flex flex-col items-center justify-center h-screen gap-2 bg-white">
             <div className="text-xl font-semibold">Sign-in to your account</div>
             <LoginForm handleSignup={handleSignin}handleGoogleSignUp={handleGoogleSignUp} handleGithubSignUp={handleGithubSignUp} error={error} setError={setError}/>
         </div>

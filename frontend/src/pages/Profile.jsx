@@ -17,10 +17,10 @@ export default function Profile(){
     }
     
     if(loading){
-        return <LoadingSpinner/>
+        return <div className="h-screen"><LoadingSpinner/></div>
     }
     return(
-        <div className="md:p-10 md:px-14 p-5 h-screen flex items-center justify-center">
+        <div className="md:p-10 md:px-14 p-5 h-screen flex items-center justify-center bg-white">
         <div className="flex flex-col items-center md:items-start gap-6 p-4 border  shadow w-1/2 min-w-max">
             <div className="flex flex-col md:flex-row items-center gap-4 w-max">
                 <div className="w-24">{<Avatar/>}</div>

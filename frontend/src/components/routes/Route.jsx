@@ -8,7 +8,7 @@ const ProtectedRoute = ({ element }) => {
   const { loggedIn, loading } = useAuth();
 
   if (loading) {
-    return <LoadingSpinner />;
+    return <div className='h-screen'><LoadingSpinner /></div>;
   }
 
   return loggedIn ? element : <Navigate to="/login" />;
@@ -18,7 +18,7 @@ const UnprotectedRoute = ({ element }) => {
   const { loggedIn, loading } = useAuth();
 
   if (loading) {
-    return <LoadingSpinner />;
+    return <div className='h-screen'><LoadingSpinner /></div>;
   }
 
   return !loggedIn ? element : <Navigate to="/home" />;
